@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+@theme {
+  --color-quest-amber: #f59e0b;
+  --color-quest-purple: #8b5cf6;
+  --color-quest-blue: #6366f1;
+  --color-quest-green: #22c55e;
+  --color-quest-red: #ef4444;
+  --color-quest-pink: #ec4899;
+  --color-quest-cyan: #06b6d4;
+  --color-surface: #1e293b;
+  --color-surface-light: #334155;
+  --color-surface-dark: #0f172a;
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+input, textarea {
+  -webkit-user-select: text;
+  user-select: text;
+}
+
+html, body, #root {
+  height: 100%;
+  overflow: hidden;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 4px;
+}
+
+/* Framer motion safe areas */
+.safe-bottom {
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+/* Toast styles */
+.toast-achievement {
+  background: linear-gradient(135deg, #6366f1, #8b5cf6) !important;
+  color: white !important;
+  border: 1px solid rgba(139, 92, 246, 0.3) !important;
+}
+
+.toast-critical {
+  background: linear-gradient(135deg, #f59e0b, #ef4444) !important;
+  color: white !important;
+}
+
+.toast-levelup {
+  background: linear-gradient(135deg, #22c55e, #06b6d4) !important;
+  color: white !important;
+}

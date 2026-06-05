@@ -1,0 +1,22 @@
+{
+  "name": "Quest Board - 游戏化任务管理",
+  "short_name": "Quest Board",
+  "description": "完成任务，获得经验，升级你的冒险者！",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0f172b",
+  "theme_color": "#0f172b",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
