@@ -53,7 +53,7 @@ export function QuickAddTask({ onAdded }: QuickAddTaskProps) {
           onChange={(e) => setTitle(e.target.value)}
           onKeyDown={(e) => e.key === 'Enter' && handleAdd()}
           placeholder="添加一个新任务..."
-          className="flex-1 min-h-[44px] px-4 py-2.5 rounded-xl bg-slate-800 border border-slate-700 text-white placeholder:text-slate-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 text-sm"
+          className="quick-add-input flex-1 min-h-[44px] px-4 py-2.5 rounded-xl bg-slate-800 border border-slate-700 text-white placeholder:text-slate-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 text-sm"
         />
         <Button onClick={handleAdd} loading={loading} size="md" className="flex-shrink-0">
           <Plus size={18} />

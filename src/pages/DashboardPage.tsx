@@ -109,11 +109,33 @@ export function DashboardPage() {
           </AnimatePresence>
 
           {!isLoading && pendingTasks.length === 0 && completedToday.length === 0 && (
-            <EmptyState
-              icon={<Sword size={32} className="text-slate-500" />}
-              title="没有待办任务"
-              description="用上方输入框快速添加今天的第一个任务吧！"
-            />
+            <div className="text-center py-6">
+              <div className="w-20 h-20 mx-auto mb-4 rounded-full bg-indigo-500/10 flex items-center justify-center">
+                <span className="text-4xl">🗡️</span>
+              </div>
+              <h2 className="text-white font-bold text-lg mb-1">准备好冒险了吗？</h2>
+              <p className="text-slate-400 text-sm mb-6 max-w-xs mx-auto">
+                在下方输入你的第一个任务，开启勇士之旅！<br />
+                每完成一个任务都会获得经验和金币
+              </p>
+              <div className="flex flex-wrap gap-2 justify-center">
+                {['🏃 跑步 30 分钟', '📖 读书 20 页', '💧 喝 8 杯水', '🧹 整理房间'].map((tip) => (
+                  <button
+                    key={tip}
+                    onClick={() => {
+                      const input = document.querySelector<HTMLInputElement>('.quick-add-input')
+                      if (input) {
+                        input.value = tip
+                        input.focus()
+                      }
+                    }}
+                    className="px-3 py-2 rounded-xl bg-slate-800 border border-slate-700 text-slate-300 text-xs hover:border-indigo-500/50 hover:text-indigo-400 transition-all"
+                  >
+                    {tip}
+                  </button>
+                ))}
+              </div>
+            </div>
           )}
 
           {!isLoading && pendingTasks.length === 0 && completedToday.length > 0 && (
